@@ -1,0 +1,5 @@
+<odoo>
+  <data>
+    <menuitem id="export_sales_data_menu_action" name="Export Sales Data" parent="point_of_sale.menu_point_rep" action="export_sales_data_wizard" sequence="99" />
+  </data>
+</odoo>
