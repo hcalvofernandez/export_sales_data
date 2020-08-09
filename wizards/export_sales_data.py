@@ -9,7 +9,7 @@ class ExportSalesDat(models.TransientModel):
     _description = 'Export Sales Data'
 
     def export_sales_data_action(self):
-        # order_recs = order_obj.search([('date_order','<=',previous_start_date),('date_order','>=',previous_new_rec_date)]).ids
+        # pos_orders = self.env['pos.order'].search([('date_order','<=',previous_start_date),('date_order','>=',previous_new_rec_date)]).ids
         pos_orders = self.env['pos.order'].search_read([],[])
         lines = []
         for rec in pos_orders:  
