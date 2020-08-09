@@ -7,10 +7,11 @@
     """,
 
     'description': """
-        Export all information of Sales and POS addons
+       Export all the information of the sales plugins and points of sale 
+       for the PlatanoMelon company to a google bucket. 
     """,
 
-    'author': "YnievesDotNet",
+    'author': "YnievesDotNet de la empresa LolaWare ",
     'website': "https://ynievesdotnet.github.io",
 
     # Categories can be used to filter modules in modules listing
