@@ -48,7 +48,7 @@ class ExportSalesDat(models.TransientModel):
         os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = directory_file+'/'+auth_file
         storage_client = storage.Client()
         bucket = storage_client.get_bucket(my_bucket)
-        blob = bucket.blob('/')
+        blob = bucket.blob('export_sales_data')
         blob.upload_from_filename(directory_file+'/'+upload_file)
-        raise MissingError(bucket)
+        raise MissingError(blob.public_url)
 
