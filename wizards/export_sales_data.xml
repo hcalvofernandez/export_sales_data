@@ -5,8 +5,12 @@
             <field name="name">export.sales.data.wizard</field>
             <field name="model">export.sales.data</field>
             <field name="arch" type="xml">
-                <form string="Procesar Factura">
+                <form string="Export Sales Data">
                     <sheet>
+                        <group>
+                            <field name="start_date" />
+                            <field name="end_date" />
+                        </group>
                         <footer>
                             <button string="Export Sales Data" name="export_sales_data_action" type="object" class="oe_highlight"/>
                             <button string="Cancel" class="btn-secondary" special="cancel" />
