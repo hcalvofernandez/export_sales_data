@@ -42,7 +42,7 @@ class ExportSalesDat(models.TransientModel):
             rowWrite.writerows(columnTitleRow)
             for dic in pos_orders:
                 for key in dic.keys():
-                    row = str(dic[key])+","
+                    row = "\""+str(dic[key])+"\""+","
                     fp.write(row)
                 fp.write('\n')
         os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = directory_file+'/'+auth_file
